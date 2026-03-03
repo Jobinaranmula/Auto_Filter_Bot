@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tiktok-downloader-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python tt_download_bot.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
